@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+body {
+  all: unset;
+  background-color: #8e44ad;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0.125rem;
+  border: 3px solid #fff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.progress > small {
+  position: absolute;
+  bottom: -1.2rem;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.box {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.box > ul {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 30px;
+}
+
+.box > ul > li {
+  list-style: none;
+  position: relative;
+  margin-top: 15px;
+}
+
+.box > ul > li:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: -30px;
+}
+
+.box > ul > li.checked:after {
+  background-color: #fff;
+}
+
+.box > ul > li.checked:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid #8e44ad;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 2px;
+  left: -24px;
+  z-index: 1;
+}
